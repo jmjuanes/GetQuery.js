@@ -8,10 +8,8 @@ Easy way to handling query string parameters.
 First, you must add GetQuery.js to your HTML document:
 
 ```html
-<script type="text/javascript" src="https://jmjuanes.github.io/GetQuery.js/getquery.js"></script>
+<script type="text/javascript" src="path/getquery.js"></script>
 ```
-
-Where **https://jmjuanes.github.io/GetQuery.js/** is the url to this repo. You can change this if you have a local copy of **GetQuery.js**. 
 
 You can create an array with the query string parameters:
 
@@ -29,6 +27,6 @@ alert(get['lang']); // -> Prints 'en'
 
 **GetQuery.js** is under the [MIT License](LICENSE).
 
-[www.jmjuanes.es](http://www.jmjuanes.es/).
+[jm.juanes.xyz](http://jm.juanes.xyz/).
 
 :)

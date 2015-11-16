@@ -1,43 +1,41 @@
 /* ************************************************************************
  *  GetQuery.js
- *  Created by Josemi Juanes [www.jmjuanes.es].
+ *  Created by Josemi Juanes [jm.juanes.xyz].
  *  Under the MIT LICENSE.
  *  
  *  For more info, visit https://github.com/jmjuanes/GetQuery.js
  *  
  */
 
+//Main
 function GetQuery()
 {
-	//Iniciamos el contenedor
-	var get = new Array();
+	//Initialize
+	var g = {};
 	
-	//Cogemos la url actual
+	//Get the url
 	var url = document.location.href;
 	
-	//Separamos y nos quedamos a partir del ?
-	var string = url.split('?')[1];
+	//Get the query from the question mark
+	var query = url.split('?')[1];
 	
-	//Comprobamos que no este vacio
-	if(typeof string != 'undefined')
+	//Check for undefined
+	if(typeof query !== 'undefined')
 	{
-		//Volvemos a separar en trozos que empiezen por &
-		var GET = string.split('&');
+		//Split by &
+		var GET = query.split('&');
 		
-		//Contamos cuantos hay
-		var long = GET.length;
-		
-		//Recorremos todos
-		for(var i = 0; i < long; i++)
+		//Loop for get all
+		for(var i = 0; i < GET.length; i++)
 		{
-			//Separamos el actual en las dos partes en que separa el =
+			//Split by =
 			var query = GET[i].split('=');
 			
-			//Lo sumamos al contenedor
-			get[query[0]] = unescape(decodeURI(query[1]));
+			//Add to the array
+			g[query[0]] = unescape(decodeURI(query[1]));
 		}
 	}
 	
-	//Devolvemos
-	return get;
+	//Return the array
+	return g;
 }
